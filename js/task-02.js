@@ -22,12 +22,15 @@ const ingredientsLists = document.querySelector("#ingredients");
 // const ingredient = document.createElement('li');
 // console.log(ingredient);
 
-ingredients.forEach(ing => {
+const ingredientItem = ingredients.map(ing => {
     const ingredient = document.createElement('li');
     
-    ingredient.textContent = ing;
+  ingredient.textContent = ing;
+  
+    return ingredient;
 
-    ingredientsLists.appendChild(ingredient);    
+       
 });
 
+ingredientsLists.append(...ingredientItem); 
 
